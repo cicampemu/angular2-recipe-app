@@ -1,0 +1,20 @@
+[
+	{
+		"id":1,
+		"type": "dessert",
+		"name": "Chocolate Cake",
+		"description": "Stear and fry..."
+	},
+	{
+		"id":2,
+		"type": "second dish",
+		"name": "Chicken Tikka",
+		"description": "Rice and chicken in a pan"
+	},
+	{
+		"id":3,
+		"type": "Apetizer",
+		"name": "Pepper Chili",
+		"description": "Stear and fry the spicy sauce in the pan."
+	}
+]  
