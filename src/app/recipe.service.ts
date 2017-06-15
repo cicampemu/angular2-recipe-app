@@ -14,5 +14,10 @@ export class RecipeService {
 	getRecipes() {
 		return this._http.get(this._url)
 			.map((response : Response) => response.json())
+			.catch(_errorHandler);
+	}
+	_errorHandlar(error: Response) {
+		console.error(error);
+		return Observable.throw(error || "Server error");
 	}
 }
