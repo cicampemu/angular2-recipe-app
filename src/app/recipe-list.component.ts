@@ -8,11 +8,13 @@ import { RecipeService } from './recipe.service';
 })
 export class RecipeListComponent implements OnInit {
 	recipes = [];
+	errorMsg: string;
 
 	constructor(private _recipeService: RecipeService) {}
 
 	ngOnInit(){
 		this._recipeService.getRecipes()
-			.subscribe(resRecipeData => this.recipes = resRecipeData)
+			.subscribe(resRecipeData => this.recipes = resRecipeData,
+				  resRecipeError => this.errorMsg = resRecipeError)
 	}
 }
